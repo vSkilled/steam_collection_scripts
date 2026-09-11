@@ -41,7 +41,7 @@ This project provides an automated, programmatic way to:
 
 ```mermaid
 flowchart TD
-    A[Start: update_steam_aaa_collection.py] --> B{Is Steam Running?}
+    A[Start: scripts/update_steam_aaa_collection.py] --> B{Is Steam Running?}
     B -- Yes --> C[Warn & Exit Safely / Require --force]
     B -- No --> D[Locate Userdata & Active Account via loginusers.vdf]
     D --> E[Create Timestamped Backup in backups/]
@@ -74,7 +74,7 @@ flowchart TD
 ```bash
 git clone https://github.com/vSkilled/steam_collection_scripts.git
 cd steam_collection_scripts
-chmod +x update_steam_aaa_collection.py
+chmod +x scripts/update_steam_aaa_collection.py
 ```
 
 ---
@@ -88,41 +88,41 @@ chmod +x update_steam_aaa_collection.py
 ### 1. View Current Collection Status
 Check which games are currently in your "AAA" collection:
 ```bash
-python3 update_steam_aaa_collection.py --status
+python3 scripts/update_steam_aaa_collection.py --status
 ```
 
 ### 2. Preview Changes (Dry Run)
 Simulate adding the curated blockbuster catalog without modifying any files:
 ```bash
-python3 update_steam_aaa_collection.py --dry-run
+python3 scripts/update_steam_aaa_collection.py --dry-run
 ```
 
 ### 3. Apply the Blockbuster / AAA Catalog
 Safely add all curated AAA titles to the collection (automatically creates a backup first):
 ```bash
-python3 update_steam_aaa_collection.py --apply
+python3 scripts/update_steam_aaa_collection.py --apply
 ```
 
 ### 4. Add Specific Games by Title or App ID
 Add individual games to the collection on demand:
 ```bash
 # Add by Title search:
-python3 update_steam_aaa_collection.py --add "Black Myth: Wukong"
+python3 scripts/update_steam_aaa_collection.py --add "Black Myth: Wukong"
 
 # Add by Steam AppID:
-python3 update_steam_aaa_collection.py --add 2358720
+python3 scripts/update_steam_aaa_collection.py --add 2358720
 ```
 
 ### 5. Search Your Owned Library
 Quickly search for titles in your Steam library and retrieve their App IDs:
 ```bash
-python3 update_steam_aaa_collection.py --scan "Witcher"
+python3 scripts/update_steam_aaa_collection.py --scan "Witcher"
 ```
 
 ### 6. Emergency Rollback / Restore
 If you ever want to revert back to before the latest modification:
 ```bash
-python3 update_steam_aaa_collection.py --restore
+python3 scripts/update_steam_aaa_collection.py --restore
 ```
 
 ---

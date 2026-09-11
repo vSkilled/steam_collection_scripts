@@ -6,13 +6,13 @@ A reusable tool to safely manage and automate adding major AAA games
 to the custom "AAA" collection in your local Steam library.
 
 Usage:
-  python3 update_steam_aaa_collection.py --status
-  python3 update_steam_aaa_collection.py --dry-run
-  python3 update_steam_aaa_collection.py --apply
-  python3 update_steam_aaa_collection.py --add 1593500
-  python3 update_steam_aaa_collection.py --add "God of War"
-  python3 update_steam_aaa_collection.py --scan
-  python3 update_steam_aaa_collection.py --restore
+  python3 scripts/update_steam_aaa_collection.py --status
+  python3 scripts/update_steam_aaa_collection.py --dry-run
+  python3 scripts/update_steam_aaa_collection.py --apply
+  python3 scripts/update_steam_aaa_collection.py --add 1593500
+  python3 scripts/update_steam_aaa_collection.py --add "God of War"
+  python3 scripts/update_steam_aaa_collection.py --scan
+  python3 scripts/update_steam_aaa_collection.py --restore
 """
 
 import argparse
